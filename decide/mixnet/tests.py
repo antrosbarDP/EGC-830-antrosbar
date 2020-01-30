@@ -34,7 +34,7 @@ class MixnetCase(APITestCase):
             ]
         }
 
-        response = self.client.post('/mixnet/', data, format='json')
+        response = self.client.post('/mixnet/shuffle/1/', data, format='json')
         self.assertEqual(response.status_code, 200)
 
         key = response.json()
